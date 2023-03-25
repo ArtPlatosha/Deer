@@ -101,6 +101,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 	transition: all ease .35s;
 }
 
@@ -235,4 +236,26 @@ body {
 	position: absolute;
 	transform: translateX(500px);
 	transition: none;
+}
+
+.container.active {
+	height: 570px;
+}
+
+.container.active .main-box.login {
+	transition: none;
+	transform: translateX(-500px);
+}
+
+.container.active .main-box.register {
+	transition:  transform .20s ease;
+	transform: translateX(0);
+}
+
+.container {
+	transform: scale(0);
+}
+
+.container.active-popup {
+	transform: scale(1);
 }
